@@ -15,8 +15,8 @@ Minimalist NodeJs Framework for Retro Web Development
 ### API & Docs
 for more information please take a look at:
 
-* [API in a Nutshell](https://github.com/mhgolkar/Dizi/Docs/Api.md)
-* [Getting Started & Examlpes](https://github.com/mhgolkar/Dizi/Docs/Getting_Started.md)
+* [API in a Nutshell](https://github.com/mhgolkar/Dizi/blob/master/Docs/Api.md)
+* [Getting Started & Examlpes](https://github.com/mhgolkar/Dizi/blob/master/Docs/Getting_Started.md)
 * [Repository Wiki + Detailed API](https://github.com/mhgolkar/Dizi/wiki)
 
 ### Quick Start
@@ -45,7 +45,7 @@ var server = app.createServer(handler, 80);
 // look: http://localhost/home
 // >> Request >> Dizi >> handler(integrated_parsed_req+, nodejs_req, nodejs_res) >> Dizi >> Response
 ```
-Dizi can Handle More Amazing Jobs, please take a look at [API](https://github.com/mhgolkar/Dizi/Docs/Api.md), or Dizi Demo [Tutorial](https://github.com/mhgolkar/Dizi/Docs/Getting_Started.md).
+Dizi can Handle More Amazing Jobs, please take a look at [API](https://github.com/mhgolkar/Dizi/blob/master/Docs/Api.md), or Dizi Demo [Tutorial](https://github.com/mhgolkar/Dizi/blob/master/Docs/Getting_Started.md).
 
 ### License
 MIT
