@@ -144,4 +144,4 @@ case 'search':
 ```
 
 Last line including `.render()` method, means: read `./profile.html`, then replace `'x-tag' in dataset` whit `dataset[x-tag]` value.  
-Ok. Done. This Demo is very plain & pulp, But i hope is useful.
+Ok. Done. This Demo is very plain & pulp. I hope this will be helpful for you.
