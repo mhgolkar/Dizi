@@ -1,0 +1,35 @@
+{
+  "name": "dizi",
+  "version": "1.0.0",
+  "description": "NodeJs Framework for Retro Web Development",
+  "main": "Dizi.js",
+  "scripts": {
+    "postinstall": "node Postinstall_Test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mhgolkar/Dizi.git"
+  },
+  "keywords": [
+    "render",
+    "parse",
+    "session",
+    "cookie",
+    "http",
+    "http server",
+    "multipart/form-data",
+    "jodo",
+    "flat file",
+    "database",
+    "no dependencies",
+    "Dizi",
+    "framework",
+    "rest"
+  ],
+  "author": "Morteza H. Golkar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mhgolkar/Dizi/issues"
+  },
+  "homepage": "https://github.com/mhgolkar/Dizi#readme"
+}
