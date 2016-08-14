@@ -1,0 +1,43 @@
+<!DOCTYPE Html>
+<html>
+    <head></head>
+    <body>
+        <h1>Open Adress Book</h1>
+        <small>This Simple App is a Dizi Framework Demo</small>
+        <div id='signOrlog'>
+            <form action='/log' method='POST' style="display: %display_login%">
+                <fieldset>
+                    <legend>Log-in</legend>
+                    <strong style='color:red'>%alert%</strong><br/>
+                    Username: <input name='username' type='text' placeholder='Username' value=''><br/>
+                    Password: <input name='password' type='password' placeholder='Password'><br/>
+                    <input type='submit' value='log-in'>
+                    <p>or <a href='/new'>sign-up</a> and create your own account</p>
+                </fieldset>
+            </form>
+        </div>
+        <div style="display: %display_wellcome%">
+            <h2>Wellcome %_user_name_%</h2>
+            <img src='%_user_img_%' width='200px' alt='[User Have No Image Yet]'>
+            <p>Please see and <a href='/edit'>edit your profile</a> or <a href='/logout'>Log-out</a></p>
+            <strong style='color:green'>%green_alert%</strong><br/>
+        </div>
+        <div id='search&recent'>
+            <form action='/search' method='POST'>
+                <fieldset>
+                    <legend>Search</legend>
+                    Look for user with<br/>
+                    <input name='what' type='search' placeholder='xyz'><br/> in
+                    <input type='checkbox' name='in' value='first'> First Name
+                    <input type='checkbox' name='in' value='last'> last Name <br/>
+                    <input type='submit' value='search'>
+                </fieldset>
+            </form><br/>
+            <h2>%_recent_users_length_% Recently Signd Users</h2>
+            <ol>
+                %_recent_users_o_list_%
+            </ol>
+            We have Totaly <strong>%_all_users_count_%</strong> Users in this adressbook.
+        </div><br/>
+    </body>
+</html>
