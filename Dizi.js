@@ -8,7 +8,7 @@
 //  | NodeJs Framework for Retro Web Development | 
 //  '--------------------------------------------'
 //  Dizi
-//  1.0.0
+//  1.0.1
 //  Morteza H. Golkar
 //  License: MIT
 */
@@ -583,7 +583,7 @@ var Dizi = function () {
                     // It's a request to public
                     var pathOfPublic = P.join(self.root, echoReq.url);
                     var extnOfPublic = (P.extname(pathOfPublic)).slice(1);
-                    var extensome = /htm/gi.test(extnOfPublic) ? html : (/xt/gi.test(extnOfPublic) ? "plain" : extnOfPublic );
+                    var extensome = /htm/gi.test(extnOfPublic) ? 'html' : (/xt/gi.test(extnOfPublic) ? "plain" : extnOfPublic );
                     try{
                         if(self.renderables.includes(extnOfPublic) && fs.statSync(pathOfPublic).isFile()){
                             var contentOfPublic = self.render(pathOfPublic, rndrOptns);
