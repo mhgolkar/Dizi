@@ -24,11 +24,10 @@
     'tag': 'Replaced tag',
     'another tag': 'another Replacement'
 }
-```
-*dataset parameter is primary and in highest priority*
+```  
 
 * `.parse(nodejs_request, req_body_buffer)`  
-Parses request body etc >> server_hanler function
+Parses request body etc >> server_handler function
 
 * `.createServer(handler<function>, port<number>)`  
 Creates and returns instance of http server.
@@ -79,11 +78,11 @@ Optional Parameters:
 ##### Cookie
 * ipr`.cookie`
     * `.set('name','value',{'Duration':<secounds>, HttpOnly:<boolean>, Secure:<boolean>, 'Max-Age':<secounds>, Path:<null/string>, Domain:<null/string>});`
-    * `.set('name','value',60)` // expires after 60 secounds
+    * `.set('name','value',60)` // expires after 60 seconds
     * `.set('name','value','flags like: HttpOnly;')`
 
 ##### Jodo (JavaScript Object Database Operation)
-Creating a Jodo database out of a normal object:
+Creating a Jodo database from a normal object:
 * dizi`.jodo('path/to/file.json')`
 * dizi`.jodo(object)`   
 both returns jodo-object, with these properties:
@@ -104,10 +103,10 @@ both returns jodo-object, with these properties:
 
 #### Events
 Dizi Apps are Naturally Event Emitters:
-* `render` : Is done and app.document is ready.
+* `render` : Rendering is done and app.document is ready.
 * `render_callback` : Callback of render function is invoked.
-* `request_ready` : Request & its body completely recived.
-* `limit` : Payload Too Large >> Request truncates to limits (dizi.limit).
+* `request_ready` : Request & its body are completely received.
+* `limit` : Payload Too Large >> Request is truncated to limits (dizi.limit).
 * `session_created`
 * `session_exited`
 * `session_fired`
