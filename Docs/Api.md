@@ -82,10 +82,10 @@ Optional Parameters:
     * `.set('name','value','flags like: HttpOnly;')`
 
 ##### Jodo (JavaScript Object Database Operation)
-Creating a Jodo database from a normal object:
+Creating a Jodo database object:
 * dizi`.jodo('path/to/file.json')`
 * dizi`.jodo(object)`   
-both returns jodo-object, with these properties:
+each returns jodo-object, with these properties:
 
     * jodo-object`.path` String (path of flat json file)
 
@@ -98,7 +98,7 @@ both returns jodo-object, with these properties:
         * value (string) what to search
         * Case insensetive (boolean - Default:true)
         * Manipulator_function (value, entry) // call on each found value and entry
-    * nested-jodo-object|subfields`.any()` // to the Darker deeps   
+    * nested-jodo-object|subfields`.any()` // to the deeper levels   
     Exmple: db.any()  db.users.any()  db.users.persians.any()
 
 #### Events
@@ -106,7 +106,7 @@ Dizi Apps are Naturally Event Emitters:
 * `render` : Rendering is done and app.document is ready.
 * `render_callback` : Callback of render function is invoked.
 * `request_ready` : Request & its body are completely received.
-* `limit` : Payload Too Large >> Request is truncated to limits (dizi.limit).
+* `limit` : Payload Too Large >> Request is truncated to limit (dizi.limit).
 * `session_created`
 * `session_exited`
 * `session_fired`
@@ -114,9 +114,9 @@ Dizi Apps are Naturally Event Emitters:
 #### Properties
 Any Instance of Dizi has this Properties:
 * `.index` String (html file/Adress)
-* `.folder` String Path to Media Folder (Default: 'root/saved_files');
+* `.folder` String -- Path to Media Folder (Default: 'root/saved_files');
 * `.tagMarker` String (like '#' for #tags) / Array (like ['%','%'] for %tags%)
-* `.callback` Function (if callback for .render method had been not set - Default: undefined)
+* `.callback` Function (Will be called, if there is not any callback for .render method -- Default: undefined)
 * `.e404` Object (Default 404 Page. like: {data:'Not Found', 'content-type':'text/plain'})
 * `.document` String (Stored recent result of .render method)
 * `.server` Http Server (Made by .createServer method)
@@ -124,5 +124,5 @@ Any Instance of Dizi has this Properties:
 * `.limit` Bytes (Payload of request body - Default: 1000000 (1MB) )
 * `.root` String (Default process.cwd())
 * `.public` Array ['path/to/public/folder1', '/statics', ...]
-* ` .localisation` Array ['en','fa']; // Avilable localisations (1st one is Default) // null = en
+* ` .localisation` Array ['en','fa']; // Available localisations (1st one is Default) // null = en
 * `.renderables` Array ['html','htm','txt','xml','md','csv','text','xhtml']
