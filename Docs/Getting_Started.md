@@ -4,14 +4,14 @@ Version: 1.0.0
 ### Installation
 You may Install Dizi using 
 **Node Package Manager** `$ npm install dizi` 
-or **Manual** (Just copy the `Dizi.js` file to your work directory). 
+or **Manually** (Copy the `Dizi.js` file to your project). 
 There is also other ways, For more Information please check this links about installing npm packages [locally](https://docs.npmjs.com/getting-started/installing-npm-packages-locally) or [globally](https://docs.npmjs.com/getting-started/installing-npm-packages-globally)
 
 
 ### Demo Project: Open Address Book
 #### 00. Ingredients
 For our new Project 'open adress book (OAB)', we need few forms, templates & a database. Look for those things in `Docs/Demo project` folder in the Dizi Git Repo. Semi-Completed Demo Project is there.    
-Thanks to Jodo, we can use JSON files as flat fil database. a sample `data.json` file is provided.  
+Thanks to Jodo, we can use JSON files as flat file databases. A sample `data.json` file is provided.  
 
 ```
 Dizi Repo:
@@ -25,9 +25,8 @@ Dizi Repo:
     |- profile.html
 ```
 
-#### 01: Setting Dizi App Up
+#### 01: Setting Dizi App
 ##### One. create `app.js`  
-The Core of OAB is `app.js`. where dizi is working.     
 
 ```
 var dz = require('dizi'); 
@@ -56,12 +55,12 @@ console.log('Dizi Open Adress Book is Alive [localhost:80]');
 
 ```
 
-Each time you `return` something from `handler` function, indexing will be overridden. So This handler means Say 'Hello Word' for ever.
+Each time you `return` something from `handler` function, indexing will be overridden. This handler means: Say 'Hello Word' for ever.
 
 #### 02: Mastering Requests
 ##### Conditions
 For an advanced app on http server, you need to edit `handler` function in `app.js`.   
-It's simple just read Integrated Parsed Request (1st argument, here: dz) and return response you like to write.
+It's simple just read Integrated Parsed Request (1st argument, here: dz) and return any response you like to publish.
 
 ```
 // Server Handler
@@ -79,10 +78,7 @@ var handler = function(ipr){
             break;
     };
 };
-```
-
-request is parsed to ipr object-argument with some usefull properties. please take a look at [Api](Api.md).  
-In our case, most exciting properties are `.target`, `.post` and `.query`.
+```   
 
 ##### Actions
 let's use parsed post request in few conditions:  
@@ -117,7 +113,7 @@ switch( ipr.target ){
 Source code has more details. But what about templating:
 
 #### 03. Templating
-We used tags like `%_user_adress_%` in templates. I mean our `.html` files. If you Like another pattern, edit `app.tagMarker=['%','%']` property. Ok. Let's play more:
+We use tags (like `%_user_adress_%`) in templates. If you Like another pattern, edit `app.tagMarker=['%','%']` property. Ok. Let's play more:
 
 ```
 ...
@@ -144,4 +140,4 @@ case 'search':
 ```
 
 Last line including `.render()` method, means: read `./profile.html`, then replace `'x-tag' in dataset` whit `dataset[x-tag]` value.  
-Ok. Done. This Demo is very plain & pulp. I hope this will be helpful for you.
+Ok. Done. This Demo is very plain & pulp, but I hope be useful either.
