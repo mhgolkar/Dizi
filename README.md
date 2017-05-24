@@ -17,14 +17,13 @@ for more information please take a look at:
 
 * [API in a Nutshell](https://github.com/mhgolkar/Dizi/blob/master/Docs/Api.md)
 * [Getting Started & Examlpes](https://github.com/mhgolkar/Dizi/blob/master/Docs/Getting_Started.md)
-* [Repository Wiki + Detailed API](https://github.com/mhgolkar/Dizi/wiki)
 
 ### Quick Start
 #### Installation
 **NPM:** `$ npm install dizi`
- or **Manual:** Just copy the `Dizi.js` file to your work directory.
+ or **Manual:** Just copy the `Dizi.js` file to your project.
 
-#### Simplest App
+#### Sample App
 ```
 const Dizi = require('dizi');
 var app = new Dizi();
