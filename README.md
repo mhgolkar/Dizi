@@ -1,6 +1,8 @@
 # Dizi
 Minimalist NodeJs Framework for Retro Web Development
 
+## [ deprecated ]
+
 ### Features
 * Reliable & Developer-Friendly
 * No Dependency
